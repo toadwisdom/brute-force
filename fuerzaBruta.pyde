@@ -1,27 +1,23 @@
-x = 0
-y = 0
-
 def setup():
     size(500, 500)  
     background(0)
     
+def draw():    
+    if mousePressed:
+        r = int(random(256))
+        g = int(random(256))
+        b = int(random(256))
+        
+        stroke(r, g, b)
+        strokeWeight(4)
+        
+        x = int(random(500))
+        y = int(random(500))
+        
+        point(x, y)
 
-def draw():
-    global x
-    global y
-    
-    stroke(255)
-    strokeWeight(2)
-    
-    point(x, y)
-    
-    x = x + 5
-    y = y + 5
-    
-    if x > 499:
-        x = 0
-        y = 0
-        clear()
+        delay(100)
+        
         
     
     
