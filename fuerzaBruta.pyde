@@ -1,9 +1,28 @@
-background(0, 0, 0)   ## cambiar color de fondo
-stroke(255, 255, 255) ## cambiar color 
-strokeWeight(10)      ## cambiar el ancho del punto
-point(10, 10)         ## dibuja un punto en la posicion 10, 10
+x = 0
+y = 0
 
+def setup():
+    size(500, 500)  
+    background(0)
+    
 
-stroke(100, 200, 255) ## cambiar color 
-strokeWeight(5)       ## cambiar el ancho del punto
-point(20, 20)         ## dibuja un punto en la posicion 10, 10
+def draw():
+    global x
+    global y
+    
+    stroke(255)
+    strokeWeight(2)
+    
+    point(x, y)
+    
+    x = x + 5
+    y = y + 5
+    
+    if x > 499:
+        x = 0
+        y = 0
+        clear()
+        
+    
+    
+    
